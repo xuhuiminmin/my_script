@@ -14,7 +14,7 @@ $output = $opt_o;
 
 if ((!defined $opt_l)|| (!defined $opt_d) || (!defined $opt_o) ) {
         die "************************************************************************
-        Usage: perl getRecordFromList.pl -l listfile -d database -o output
+        Usage: perl find_records.pl -l listfile -d database -o output
           -h : help and usage.
           -l : gene list. Note the the name of gene should be same with the database
           -d : database record file
