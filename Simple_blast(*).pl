@@ -1,27 +1,4 @@
- #!/usr/bin/perl -w
-
-###I can't remember makeblastdb and blast paramters all the time
-###Therefore develop this script for simple blast
-
-use Getopt::Std;
-getopts "i:d:p:c:e:o:f:n:";
-
-
-if ((!defined $opt_i)|| (!defined $opt_d)  || (!defined $opt_p)) {
-    die "************************************************************************
-    Usage: perl simple_blast.pl -i query.fasta -d database -p blastn 
-      -h : help and usage.
-      -i : query.fasta
-      -d : database.fasta
-      -p : program, could be blastn, blastp or blastx
-      -c : cpu (default 4)
-      -e : evalue (default 1e-3)
-      -o : output (default: blast.out)
-      -f : output format (default 6);
-      -n : number of alignment (default all)
-************************************************************************\n";
-}else{
- #!/usr/bin/perl -w
+#!/usr/bin/perl -w
 
 ###I can't remember makeblastdb and blast paramters all the time
 ###Therefore develop this script for simple blast
