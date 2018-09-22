@@ -1,3 +1,23 @@
+#!perl -w 
+my %hash;
+open(IN,$ARGV[0]) or die "";
+while (<IN>){
+        chomp;
+        @tp = split(/\n/,$_);
+        foreach $i(0..$#tp){
+                $n = $tp[$i];
+                @da = split (/\s+/,$n);
+                if(!exists($hash{$da[-1]})){
+                                print "###\n";                                  
+                                }
+                        print "$n\n";
+                        $hash{$da[-1]} += 1;
+                        }
+        
+        }
+close IN;
+********************************************************************************************first:add lable 
+***********************************************************************************************second:sort position and extract
 #!perl -w
 my %hash;
 open(IN,$ARGV[0]) or die "";
