@@ -1,0 +1,14 @@
+#!perl -w
+open(IN,$ARGV[0]) or die"";
+<IN>;
+while(<IN>){
+      @line = split(/\s+/,$_);
+      $n = @line;
+     # if($line[2] and $line[4] and $line[6] and $line[8] and $line[10] and $line[12] and ) 
+     if($n == 18){
+     $data = join("\t",@line);
+     print "$data\n";
+}
+
+}
+close IN;
