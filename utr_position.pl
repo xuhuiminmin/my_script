@@ -10,7 +10,7 @@ while(<IN>){
      $hash{$id} = $_; 
 }
 close IN;
-print "Chr\tstart\tend\tgeneid\tstrand\tthree_prime_UTR_start\tend\tfive_prime_UTR_start\tend\n";
+print "Chr\tstart\tend\tgeneid\tstrand\tfive_prime_UTR_start\tend\tthree_prime_UTR_start\tend\n";
 open(IM,$ARGV[1]) or die"";
 $/='>';
 <IM>;
@@ -30,11 +30,11 @@ while(<IM>){
      my @arry = ($stop_pos1,$stop_pos2,$stop_pos3);
      @arry = sort{$a <=> $b} @arry;
      $stop_pos = $arry[-1];
-     $th_utr1 = $ex1_start;
-     $th_utr2 = $ex1_start + $star_pos-2; 
-     $fi_utr1 = $ex1_start + $stop_pos+2;
-     $fi_utr2 = $ex_end;
-     print "$chr\t$ex1_start\t$ex_end\t$name\t$dire\t$th_utr1\t$th_utr2\t$fi_utr1\t$fi_utr2\n";
+     $fi_utr1 = $ex1_start;
+     $fi_utr2 = $ex1_start + $star_pos-2; 
+     $th_utr1 = $ex1_start + $stop_pos+2;
+     $th_utr2 = $ex_end;
+     print "$chr\t$ex1_start\t$ex_end\t$name\t$dire\t$fi_utr1\t$fi_utr2\t$th_utr1\t$th_utr2\n";
      }
 }
 close IM;
