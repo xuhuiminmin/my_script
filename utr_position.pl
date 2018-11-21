@@ -4,7 +4,7 @@ my %hash;
 open(IN,$ARGV[0]) or die "";
 while(<IN>){
      @line = split(/\s+/,$_);
-     $id = $line[11];
+     $id = $line[9];
      $id =~ s/\"//g;
      $id =~ s/\;//g;
      $hash{$id} = $_; 
@@ -64,4 +64,5 @@ while(<IM>){
     }
 }
 close IM;
+
 
